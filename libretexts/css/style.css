@@ -1,734 +1,722 @@
 /* =============================================================================
-   BASE STYLES
-   ========================================================================== */
+BASE STYLES
+========================================================================== */
 body {
-	font-family: "Montserrat", sans-serif;
-	font-size: 1.125em;
-	background-color: white;
-	padding: 20px;
+font-family: &quot;Montserrat&quot;, sans-serif;
+font-size: 1.125em;
+background-color: white;
 }
 
 /* =============================================================================
-   FOOTNOTES
-   ========================================================================== */
+FOOTNOTES
+========================================================================== */
 .notes-label {
-  margin-bottom: 0;
-  font-size: 12px;
+margin-bottom: 0;
+font-size: 12px;
 }
 
 .notes-list {
-  margin: 0;
-  font-size: 12px;
+margin: 0;
+font-size: 12px;
 }
 
 .notes-list li {
-  font-size: 12px;
+font-size: 12px;
 }
 
 .notes-list li::marker {
-  font-size: 12px;
+font-size: 12px;
 }
 
 /* =============================================================================
-   GENERAL ADMONITION STYLES
-   ========================================================================== */
+GENERAL ADMONITION STYLES
+========================================================================== */
 .container {
-	max-width: full;
-	margin: 0 auto;
+max-width: full;
+margin: 0 auto;
 }
 
 .admon {
-	background-color: white;
-	border-radius: 8px;
-	overflow: hidden;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-	transition: all 0.3s ease;
-	border: 1px solid;
+background-color: white;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+transition: all 0.3s ease;
+border: 1px solid;
 }
 
 .admon-header {
-	display: flex;
-	align-items: center;
-	padding: 14px 16px;
-	color: white;
-	font-weight: 500;
+display: flex;
+align-items: center;
+padding: 14px 16px;
+color: white;
+font-weight: 500;
 }
 
 .admon-icon {
-	margin-right: 10px;
-	display: flex;
-	align-items: center;
+margin-right: 10px;
+display: flex;
+align-items: center;
 }
 
 .admon-title {
-	font-size: 18px;
-	letter-spacing: 0.5px;
+font-size: 18px;
+letter-spacing: 0.5px;
 }
 
 .admon-body {
-	padding: 20px;
-	font-size: 18px;
-	line-height: 1.6;
+padding: 20px;
+font-size: 18px;
+line-height: 1.6;
 }
 
 .admon-body ol,
 .admon-body ul {
-	padding-left: 1em;
-	margin: 0;
+padding-left: 1em;
+margin: 0;
 }
 
 /* =============================================================================
-   VIDEO & LISTEN ADMONITIONS
-   ========================================================================== */
+VIDEO &amp; LISTEN ADMONITIONS
+========================================================================== */
 .admon-video .video-container,
 .admon-listen .listen-container {
-	position: relative;
-	width: 100%;
-	max-width: 660px;
-	margin: 0 auto;
+position: relative;
+width: 100%;
+max-width: 660px;
+margin: 0 auto;
 }
 
 .admon-video .admon-body,
 .admon-listen .admon-body {
-	text-align: center;
+text-align: center;
 }
 
 .admon-video .admon-body p:first-of-type,
 .admon-listen .admon-body p:first-of-type {
-	text-align: left;
-	font-size: 18px;
-	margin-top: 0;
-	margin-bottom: 1em;
+text-align: left;
+font-size: 18px;
+margin-top: 0;
+margin-bottom: 1em;
 }
 
 .admon-video .video-container iframe,
 .admon-listen .listen-container iframe {
-	width: 100%;
-	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: 100%;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .admon-video .video-container iframe {
-	height: 371px;
+height: 371px;
 }
 
 .admon-listen .listen-container iframe {
-	height: 175px;
+height: 175px;
 }
 
 .admon-video .admon-content,
 .admon-listen .admon-content {
-	padding: 20px;
-	margin-top: -10px;
-	text-align: center;
-	padding-top: 0;
-	padding-bottom: 20px;
+padding: 20px;
+margin-top: -10px;
+text-align: center;
+padding-top: 0;
+padding-bottom: 20px;
 }
 
-.admon-video .admon-content > *:first-child,
-.admon-listen .admon-content > *:first-child {
-	margin-top: 0;
-	padding-top: 0;
+.admon-video .admon-content &gt; *:first-child,
+.admon-listen .admon-content &gt; *:first-child {
+margin-top: 0;
+padding-top: 0;
 }
 
 .admon-video .admon-content .bc-figure,
 .admon-listen .admon-content .bc-figure,
 .admon-video .admon-content em,
 .admon-listen .admon-content em {
-	margin-top: 0;
-	margin-bottom: 0.35em;
-	line-height: 1.25;
-	font-size: 14px;
+margin-top: 0;
+margin-bottom: 0.35em;
+line-height: 1.25;
+font-size: 14px;
 }
 
 /* Optional subtle tuck */
 .admon-video.tight-caption .admon-content,
 .admon-listen.tight-caption .admon-content {
-	margin-top: -6px;
+margin-top: -6px;
 }
 
 /* Individual theme colors */
 .admon-video {
-	border-color: #dd4f40;
+border-color: #dd4f40;
 }
 .admon-video .admon-header {
-	background-color: #be0000;
-	color: white;
+background-color: #be0000;
+color: white;
 }
 
 .admon-listen {
-	border-color: #ad5fcf;
+border-color: #ad5fcf;
 }
 .admon-listen .admon-header {
-	background-color: #efcbff;
-	color: black;
+background-color: #efcbff;
+color: black;
 }
 
 .mt-align-center {
-	text-align: center;
+text-align: center;
 }
 
 /* =============================================================================
-   LINKS & EMPHASIS
-   ========================================================================== */
+LINKS &amp; EMPHASIS
+========================================================================== */
 a {
-	color: #4a6ee0;
-	text-decoration: none;
-	transition: color 0.2s;
+color: #4a6ee0;
+text-decoration: none;
+transition: color 0.2s;
 }
 
 a:hover {
-	color: #2a4ec4;
-	text-decoration: underline;
+color: #2a4ec4;
+text-decoration: underline;
 }
 
 em {
-	font-style: italic;
-	color: #555;
+font-style: italic;
+color: #555;
 }
 
 /* =============================================================================
-   ADMONITION VARIANTS (TIP, NOTE, INFO, ETC.)
-   ========================================================================== */
+ADMONITION VARIANTS (TIP, NOTE, INFO, ETC.)
+========================================================================== */
 .admon-note {
-	border-color: #decc8b;
+border-color: #decc8b;
 }
 .admon-note .admon-icon::before {
-	font-family: "Font Awesome 5 Pro";
-	content: "\f044";
-	font-size: 1.1em;
-	color: black;
-	font-weight: 900;
+font-family: &quot;Font Awesome 5 Pro&quot;;
+content: &quot;\f044&quot;;
+font-size: 1.1em;
+color: black;
+font-weight: 900;
 }
 .admon-note .admon-header {
-	background-color: #ffeba1;
-	color: black;
+background-color: #ffeba1;
+color: black;
 }
 
 .admon-tip {
-	border-color: #00bcd4;
+border-color: #00bcd4;
 }
 .admon-tip .admon-header {
-	background-color: #00bcd4;
+background-color: #00bcd4;
 }
 
 .admon-info {
-	border-color: #2196f3;
+border-color: #2196f3;
 }
 .admon-info .admon-header {
-	background-color: #2196f3;
+background-color: #2196f3;
 }
 
 .admon-success {
-	border-color: #4caf50;
+border-color: #4caf50;
 }
 .admon-success .admon-header {
-	background-color: #4caf50;
+background-color: #4caf50;
 }
 
 .admon-warning {
-	border-color: #ff9800;
+border-color: #ff9800;
 }
 .admon-warning .admon-header {
-	background-color: #ff9800;
+background-color: #ff9800;
 }
 
 .admon-case {
-	border-color: #aaa691;
+border-color: #aaa691;
 }
 .admon-case .admon-icon::before {
-	font-family: "Font Awesome 7 Free";
-	content: "\f0e3";
-	font-size: 1.2em;
-	font-weight: 900;
-	color: black;
+font-family: &quot;Font Awesome 7 Free&quot;;
+content: &quot;\f0e3&quot;;
+font-size: 1.2em;
+font-weight: 900;
+color: black;
 }
 .admon-case .admon-header {
-	background-color: #e5e0c4;
-	color: black;
+background-color: #e5e0c4;
+color: black;
 }
 
 .admon-important {
-	border-color: #e91e63;
+border-color: #e91e63;
 }
 .admon-important .admon-header {
-	background-color: #e91e63;
+background-color: #e91e63;
 }
 
 .admon-caution {
-	border-color: #ff5722;
+border-color: #ff5722;
 }
 .admon-caution .admon-header {
-	background-color: #ff5722;
+background-color: #ff5722;
 }
 
 .admon-sidebar {
-	border-color: #9cbfb5;
+border-color: #9cbfb5;
 }
 .admon-sidebar .admon-header {
-	background-color: #e6efec;
-	color: #202e2a;
+background-color: #e6efec;
+color: #202e2a;
 }
 
 /* =============================================================================
-   SPECIALIZED ADMONITIONS
-   ========================================================================== */
+SPECIALIZED ADMONITIONS
+========================================================================== */
 .admon-objectives {
-	border-color: #68a3d8;
+border-color: #68a3d8;
 }
 .admon-objectives .admon-header {
-	background-color: #127bc4;
+background-color: #127bc4;
 }
 .admon-objectives .admon-icon::before {
-	font-family: "Font Awesome 5 Pro";
-	content: "\f648";
-	font-size: 1.2em;
-	font-weight: 700;
-	color: white;
+font-family: &quot;Font Awesome 5 Pro&quot;;
+content: &quot;\f648&quot;;
+font-size: 1.2em;
+font-weight: 700;
+color: white;
 }
 
 .admon-keys {
-	border-color: #f59e0b;
+border-color: #f59e0b;
 }
 .admon-keys .admon-header {
-	background-color: #fff4e5;
-	color: #5a3100;
+background-color: #fff4e5;
+color: #5a3100;
 }
 .admon-keys .admon-icon::before {
-	font-family: "Font Awesome 5 Pro";
-	content: "\f084";
-	font-weight: 400;
-	font-size: 1.2em;
-	color: #5a3100;
+font-family: &quot;Font Awesome 5 Pro&quot;;
+content: &quot;\f084&quot;;
+font-weight: 400;
+font-size: 1.2em;
+color: #5a3100;
 }
 
 .admon-read {
-	border-color: #bda89b;
+border-color: #bda89b;
 }
 .admon-read .admon-header {
-	background-color: #f6f3f1;
-	color: #130400;
+background-color: #f6f3f1;
+color: #130400;
 }
 
 .admon-example {
-	border-color: #afd9f0;
+border-color: #afd9f0;
 }
 .admon-example .admon-icon::before {
-	font-family: "Font Awesome 7 Free";
-	font-weight: 900;
-	content: "\e53d";
-	color: #002c42;
-	font-size: 1.2em;
+font-family: &quot;Font Awesome 7 Free&quot;;
+font-weight: 900;
+content: &quot;\e53d&quot;;
+color: #002c42;
+font-size: 1.2em;
 }
 .admon-example .admon-header {
-	background-color: #e3f4ff;
-	color: black;
+background-color: #e3f4ff;
+color: black;
 }
 
 .admon-exercise {
-	border-color: #a5b9da;
+border-color: #a5b9da;
 }
 .admon-exercise .admon-header {
-	background-color: #f5f8ff;
-	color: #143160;
+background-color: #f5f8ff;
+color: #143160;
 }
 .answer-header {
-    font-family: Montserrat, sans-serif !important;
-    font-size: 18px !important;
-    font-weight: bold !important;
-    color: #0372a6 !important;
-    margin-bottom: -10px !important;
-    cursor: pointer;
-	font-weight: 300;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+font-family: Montserrat, sans-serif !important;
+font-weight: bold !important;
+color: #0372a6 !important;
+margin-bottom: -10px !important;
+cursor: pointer;
+display: flex;
+align-items: center;
+gap: 6px;
+user-select: none;
+position: relative;
+padding-left: 18px; /* Space for symbol */
 }
 
-.answer-arrow i {
-    display: inline-block;
-    transition: transform 0.2s ease-in-out;
-	font-size: 1rem;
-    font-weight: bold;
+.answer-header::before {
+content: &quot;\2BC8&quot;;
+position: absolute;
+left: 0;
+top: 50%;
+transform: translateY(-50%) rotate(0deg);
+transform-origin: center;
+display: inline-block;
+font-size: 14px;
+transition: transform 0.3s ease-in-out;
+}
+
+/* When open, rotate the arrow down */
+.answer-header.is-open::before {
+transform: translateY(-50%) rotate(90deg);
 }
 
 .answer-content {
-    font-family: Montserrat, sans-serif !important;
-    font-size: 18px !important;
-    padding-left: 25px !important;
-    transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
-    overflow: hidden !important;
-    height: auto;
+font-family: Montserrat, sans-serif !important;
+font-size: 12px !important;
+padding-left: 25px !important;
+transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+overflow: hidden !important;
+height: auto;
 }
 
 .answer-content.is-hidden {
-    height: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+height: 0 !important;
+padding-top: 0 !important;
+padding-bottom: 0 !important;
 }
 
-.attrib-header {
-  font-family: Montserrat, sans-serif !important;
-  font-size: 12px !important;
-  font-weight: bold !important;
-  color: #0372a6 !important;
-  margin-bottom: -10px !important;
-  cursor: pointer;
-  font-weight: 300;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.expand_notes-header {
+font-family: Montserrat, sans-serif !important;
+font-size: 12px !important;
+font-weight: bold !important;
+color: #0372a6 !important;
+margin-bottom: -10px !important;
+cursor: pointer;
+display: flex;
+align-items: center;
+gap: 6px;
+user-select: none;
+position: relative;
+padding-left: 18px; /* Space for symbol */
 }
 
-.attrib-arrow i {
-  display: inline-block;
-  transition: transform 0.2s ease-in-out;
-  font-size: 12px;
-  font-weight: bold;
+.expand_notes-header::before {
+content: &quot;\2BC8&quot;;
+position: absolute;
+left: 0;
+top: 50%;
+transform: translateY(-50%) rotate(0deg);
+transform-origin: center;
+display: inline-block;
+font-size: 14px;
+transition: transform 0.3s ease-in-out;
 }
 
-.attrib-content {
-  font-family: Montserrat, sans-serif !important;
-  font-size: 12px !important;
-  padding-left: 25px !important;
-  transition:
-    height 0.3s ease-in-out,
-    padding 0.3s ease-in-out;
-  overflow: hidden !important;
-  height: auto;
+/* When open, rotate the arrow down */
+.expand_notes-header.is-open::before {
+transform: translateY(-50%) rotate(90deg);
 }
 
-.attrib-content.is-hidden {
-  height: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+.expand_notes-content {
+font-family: Montserrat, sans-serif !important;
+font-size: 12px !important;
+padding-left: 25px !important;
+transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+overflow: hidden !important;
+height: auto;
 }
 
-.editorial-header {
-  font-family: Montserrat, sans-serif !important;
-  font-size: 12px !important;
-  font-weight: bold !important;
-  color: #0372a6 !important;
-  margin-bottom: -10px !important;
-  cursor: pointer;
-  font-weight: 300;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.expand_notes-content.is-hidden {
+height: 0 !important;
+padding-top: 0 !important;
+padding-bottom: 0 !important;
+}
+padding-bottom: 0 !important;
 }
 
-.editorial-arrow i {
-  display: inline-block;
-  transition: transform 0.2s ease-in-out;
-  font-size: 12px;
-  font-weight: bold;
-}
 
-.editorial-content {
-  font-family: Montserrat, sans-serif !important;
-  font-size: 12px !important;
-  padding-left: 25px !important;
-  transition:
-    height 0.3s ease-in-out,
-    padding 0.3s ease-in-out;
-  overflow: hidden !important;
-  height: auto;
-}
 
-.editorial-content.is-hidden {
-  height: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
 
 
 /* =============================================================================
-   SUPPORTING SECTIONS (Usage, Icon Reference)
-   ========================================================================== */
+CUSTOM EXPANDABLES
+========================================================================== */
+.custom-expandable-content.is-hidden {
+height: 0 !important;
+padding-top: 0 !important;
+padding-bottom: 0 !important;
+}
+
+/* =============================================================================
+SUPPORTING SECTIONS (Usage, Icon Reference)
+========================================================================== */
 .usage-section,
 .icon-reference {
-	background-color: white;
-	padding: 25px;
-	border-radius: 10px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	margin-top: 30px;
+background-color: white;
+padding: 25px;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+margin-top: 30px;
 }
 
 .usage-section h2,
 .icon-reference h2 {
-	color: #3f51b5;
-	margin-bottom: 20px;
-	font-weight: 500;
-	padding-bottom: 10px;
-	border-bottom: 1px solid #eee;
+color: #3f51b5;
+margin-bottom: 20px;
+font-weight: 500;
+padding-bottom: 10px;
+border-bottom: 1px solid #eee;
 }
 
 /* =============================================================================
-   CODE BLOCKS
-   ========================================================================== */
+CODE BLOCKS
+========================================================================== */
 pre {
-	background-color: #f8f9fa;
-	padding: 18px;
-	border-radius: 6px;
-	overflow-x: auto;
-	margin: 15px 0;
-	font-family: "Courier New", monospace;
-	font-size: 14px;
-	border-left: 4px solid #3f51b5;
+background-color: #f8f9fa;
+padding: 18px;
+border-radius: 6px;
+overflow-x: auto;
+margin: 15px 0;
+font-family: &quot;Courier New&quot;, monospace;
+font-size: 14px;
+border-left: 4px solid #3f51b5;
 }
 
 code {
-	background-color: #f8f9fa;
-	padding: 3px 6px;
-	border-radius: 3px;
-	font-family: "Courier New", monospace;
-	color: #d63384;
+background-color: #f8f9fa;
+padding: 3px 6px;
+border-radius: 3px;
+font-family: &quot;Courier New&quot;, monospace;
+color: #d63384;
 }
 
 /* =============================================================================
-   RESPONSIVE ADJUSTMENTS
-   ========================================================================== */
+RESPONSIVE ADJUSTMENTS
+========================================================================== */
 @media (max-width: 768px) {
-	.admons-grid {
-		grid-template-columns: 1fr;
-	}
-	body {
-		padding: 15px;
-	}
+.admons-grid {
+grid-template-columns: 1fr;
+}
+body {
+padding: 15px;
+}
 }
 
 @media (max-width: 480px) {
-	.admon-header {
-		padding: 12px 14px;
-	}
-	.admon-body {
-		padding: 16px;
-	}
-	.admon-video .video-container iframe,
-	.admon-listen .listen-container iframe {
-		height: 200px;
-	}
+.admon-header {
+padding: 12px 14px;
+}
+.admon-body {
+padding: 16px;
+}
+.admon-video .video-container iframe,
+.admon-listen .listen-container iframe {
+height: 200px;
+}
 }
 
 /* =============================================================================
-   TOOLTIP STYLING
-   ========================================================================== */
+TOOLTIP STYLING
+========================================================================== */
 .tooltip {
-	position: relative;
-	display: inline-block;
-	cursor: help;
-	border-bottom: 1px dotted black;
+position: relative;
+display: inline-block;
+cursor: help;
+border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
-	visibility: hidden;
-	width: max-content;
-	max-width: 250px;
-	background-color: #e7f6fe;
-	color: #0a73a5;
-	text-align: left;
-	font-size: 14px;
-	border: 2px solid #34b4f5;
-	border-radius: 5px;
-	padding: 5px 10px;
-	position: absolute;
-	z-index: 1;
-	bottom: 125%;
-	left: 50%;
-	transform: translateX(-50%);
-	opacity: 0;
-	transition: opacity 0.3s, visibility 0.3s;
-	word-wrap: break-word;
-	pointer-events: auto;
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+visibility: hidden;
+width: max-content;
+max-width: 250px;
+background-color: #e7f6fe;
+color: #0a73a5;
+text-align: left;
+font-size: 14px;
+border: 2px solid #34b4f5;
+border-radius: 5px;
+padding: 5px 10px;
+position: absolute;
+z-index: 1;
+bottom: 125%;
+left: 50%;
+transform: translateX(-50%);
+opacity: 0;
+transition: opacity 0.3s, visibility 0.3s;
+word-wrap: break-word;
+pointer-events: auto;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .tooltip:hover .tooltiptext,
 .tooltip:focus .tooltiptext {
-	visibility: visible;
-	opacity: 1;
+visibility: visible;
+opacity: 1;
 }
 
 .tooltip .tooltiptext::before {
-	content: "";
-	position: absolute;
-	bottom: -8px;
-	left: 50%;
-	transform: translateX(-50%);
-	border-width: 8px 8px 0 8px;
-	border-style: solid;
-	border-color: #004d80 transparent transparent transparent;
+content: &quot;&quot;;
+position: absolute;
+bottom: -8px;
+left: 50%;
+transform: translateX(-50%);
+border-width: 8px 8px 0 8px;
+border-style: solid;
+border-color: #004d80 transparent transparent transparent;
 }
 
 @media (max-width: 600px) {
-	.tooltip .tooltiptext {
-		bottom: 105%;
-		left: 0;
-		transform: translateX(0);
-		width: 90%;
-		max-width: 90%;
-		text-align: center;
-	}
-	.tooltip .tooltiptext::before {
-		left: 10%;
-	}
+.tooltip .tooltiptext {
+bottom: 105%;
+left: 0;
+transform: translateX(0);
+width: 90%;
+max-width: 90%;
+text-align: center;
+}
+.tooltip .tooltiptext::before {
+left: 10%;
+}
 }
 
 /* =============================================================================
-   COLLAPSIBLES
-   ========================================================================== */
+COLLAPSIBLES FOR BOXES
+========================================================================== */
 .collapsible {
-	display: flex;
-	align-items: center;
-	padding: 0.9em 1em;
-	background-color: #edffeb;
-	color: #002c07;
-	border: 1px solid #36843a;
-	border-radius: 6px;
-	cursor: pointer;
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 1.4;
-	transition: background-color 0.3s ease;
+display: flex;
+align-items: center;
+padding: 0.9em 1em;
+background-color: #edffeb;
+color: #002c07;
+border: 1px solid #36843a;
+border-radius: 6px;
+cursor: pointer;
+font-size: 18px;
+font-weight: 600;
+line-height: 1.4;
+transition: background-color 0.3s ease;
 }
 
 .collapsible:hover,
 .active {
-	background-color: #d9ffdb;
+background-color: #d9ffdb;
 }
 
 .collapsible:before {
-	content: "\2b";
-	font-family: "Font Awesome 7 Free";
-	font-weight: 600;
-	font-size: 0.6em;
-	margin-right: 12px;
-	margin-left: 4px;
+content: &quot;\2b&quot;;
+font-family: &quot;Font Awesome 7 Free&quot;;
+font-weight: 600;
+font-size: 0.6em;
+margin-right: 12px;
+margin-left: 4px;
 }
 
 .active:before {
-	content: "\f068";
-	font-family: "Font Awesome 7 Free";
-	font-weight: 900;
-	margin-right: 12px;
-	margin-left: 4px;
+content: &quot;\f068&quot;;
+font-family: &quot;Font Awesome 7 Free&quot;;
+font-weight: 900;
+margin-right: 12px;
+margin-left: 4px;
 }
 
 .collapsible .material-icons {
-	margin-right: 8px;
-	vertical-align: middle;
+margin-right: 8px;
+vertical-align: middle;
 }
 
 .collapsible-content {
-	max-height: 0;
-	overflow: hidden;
-	background-color: #f8fff8;
-	border: 1px solid transparent;
-	border-top: none;
-	border-radius: 0 0 6px 6px;
-	transition: max-height 0.4s ease-out, border-color 0.3s ease;
-	padding: 0 10px;
+max-height: 0;
+overflow: hidden;
+background-color: #f8fff8;
+border: 1px solid transparent;
+border-top: none;
+border-radius: 0 0 6px 6px;
+transition: max-height 0.4s ease-out, border-color 0.3s ease;
+padding: 0 10px;
 }
 
 .collapsible-content ol,
 .collapsible-content ul {
-	margin-left: 0.5em;
-	padding-left: 0.5em;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	list-style-position: outside;
+margin-left: 0.5em;
+padding-left: 0.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+list-style-position: outside;
 }
 
 .active + .collapsible-content {
-	border-color: #36843a;
-	max-height: 500px;
-	padding: 20px;
-	font-size: 18px;
+border-color: #36843a;
+max-height: 500px;
+padding: 20px;
+font-size: 18px;
 }
 
 /* Collapsible Variants */
 .collapsible-read {
-	background-color: #f6f3f1;
-	color: #130400;
-	border-color: #bda89b;
+background-color: #f6f3f1;
+color: #130400;
+border-color: #bda89b;
 }
 .collapsible-read:hover,
 .collapsible-read.active {
-	background-color: #f0edec;
+background-color: #f0edec;
 }
 .collapsible-read:before,
 .collapsible-read.active:before {
-	color: #130400;
+color: #130400;
 }
 .collapsible-read.active + .collapsible-content {
-	border-color: #bda89b;
-	background-color: white;
+border-color: #bda89b;
+background-color: white;
 }
 .collapsible-read + .collapsible-content {
-	background-color: white;
+background-color: white;
 }
 
 .collapsible-orange {
-	background-color: #fff4e5;
-	color: #5a3100;
-	border-color: #f59e0b;
+background-color: #fff4e5;
+color: #5a3100;
+border-color: #f59e0b;
 }
 .collapsible-orange:hover,
 .collapsible-orange.active {
-	background-color: #ffe9cc;
+background-color: #ffe9cc;
 }
 .collapsible-orange:before,
 .collapsible-orange.active:before {
-	color: #5a3100;
+color: #5a3100;
 }
 .collapsible-orange.active + .collapsible-content {
-	border-color: #f59e0b;
-	background-color: #fff7eb;
+border-color: #f59e0b;
+background-color: #fff7eb;
 }
 .collapsible-orange + .collapsible-content {
-	background-color: #fff7eb;
+background-color: #fff7eb;
 }
 
 /* =============================================================================
-   ELISION / HIDE BUTTONS
-   ========================================================================== */
+ELISION / HIDE BUTTONS
+========================================================================== */
 .elide-ellipsis,
 .hide-btn {
-	display: inline;
-	line-height: 1;
-	font-size: 1em;
-	font-weight: normal;
-	vertical-align: baseline;
-	padding: 0;
-	margin: 0;
-	border: none;
-	background: none;
-	color: #0000cc;
-	cursor: pointer;
-	text-decoration: none;
+display: inline;
+line-height: 1;
+font-size: 1em;
+font-weight: normal;
+vertical-align: baseline;
+padding: 0;
+margin: 0;
+border: none;
+background: none;
+color: #0000cc;
+cursor: pointer;
+text-decoration: none;
 }
 
 .elide-ellipsis:hover,
 .hide-btn:hover {
-	color: #004999;
-	text-decoration: underline solid;
+color: #004999;
+text-decoration: underline solid;
 }
 
 .hide-btn .hide-word {
-	font-size: 0.9em;
-	font-weight: normal;
-	font-style: italic;
+font-size: 0.9em;
+font-weight: normal;
+font-style: italic;
 }
 
 .elide-ellipsis strong.elide-dots {
-	font-weight: bold;
-}
-
-
-
-
-.custom-expandable-content.is-hidden {
-	height: 0 !important;
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
+font-weight: bold;
 }
