@@ -27,3 +27,35 @@
   margin-bottom: 0.2em !important;
   line-height: 1.25 !important;
 }
+
+/* Remove unexpected vertical gaps inserted by LibreTexts globals */
+.admon-listen.admon-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+
+/* Tighten the area directly below the iframe */
+.admon-listen .listen-container {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+
+/* Neutralize Mindtouch figure and emphasis defaults */
+.admon-listen .admon-content .bc-figure,
+.admon-listen .admon-content .figure,
+.admon-listen .admon-content em {
+  margin-top: 0 !important;
+  margin-bottom: 0.2em !important;
+  line-height: 1.25 !important;
+}
+
+
+/* Sometimes Mindtouch wraps <em> in <p>, so flatten that too */
+.admon-listen .admon-content p {
+  margin-top: 0 !important;
+  margin-bottom: 0.2em !important;
+  line-height: 1.25 !important;
+}
+
