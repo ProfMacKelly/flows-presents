@@ -5,24 +5,27 @@ body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 1.125em;
 	background-color: white;
-	padding: 20px;
 }
 
 /* =============================================================================
    FOOTNOTES
    ========================================================================== */
 .notes-label {
-	margin-bottom: 0;
+  margin-bottom: 0;
+  font-size: 12px;
 }
 
 .notes-list {
-	margin: 0;
-	font-size: 12px;
+  margin: 0;
+  font-size: 12px;
+}
+
+.notes-list li {
+  font-size: 12px;
 }
 
 .notes-list li::marker {
-	content: "[" counter(list-item) "] ";
-	font-size: 12px;
+  font-size: 12px;
 }
 
 /* =============================================================================
@@ -328,6 +331,113 @@ em {
 	background-color: #f5f8ff;
 	color: #143160;
 }
+.answer-header {
+  font-family: Montserrat, sans-serif !important;
+  font-weight: bold !important;
+  color: #0372a6 !important;
+  margin-bottom: -10px !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+  position: relative;
+  padding-left: 18px; /* Space for symbol */
+}
+
+.answer-header::before {
+  content: "\2BC8";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transform-origin: center;
+  display: inline-block;
+  font-size: 14px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* When open, rotate the arrow down */
+.answer-header.is-open::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.answer-content {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 12px !important;
+  padding-left: 25px !important;
+  transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  overflow: hidden !important;
+  height: auto;
+}
+
+.answer-content.is-hidden {
+  height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.expand_notes-header {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #0372a6 !important;
+  margin-bottom: -10px !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+  position: relative;
+  padding-left: 18px; /* Space for symbol */
+}
+
+.expand_notes-header::before {
+  content: "\2BC8";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transform-origin: center;
+  display: inline-block;
+  font-size: 14px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* When open, rotate the arrow down */
+.expand_notes-header.is-open::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.expand_notes-content {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 12px !important;
+  padding-left: 25px !important;
+  transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  overflow: hidden !important;
+  height: auto;
+}
+
+.expand_notes-content.is-hidden {
+  height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+ padding-bottom: 0 !important;
+}
+
+
+
+
+
+/* =============================================================================
+   CUSTOM EXPANDABLES
+   ========================================================================== */
+.custom-expandable-content.is-hidden {
+	height: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
 
 /* =============================================================================
    SUPPORTING SECTIONS (Usage, Icon Reference)
@@ -462,7 +572,7 @@ code {
 }
 
 /* =============================================================================
-   COLLAPSIBLES
+   COLLAPSIBLES FOR BOXES
    ========================================================================== */
 .collapsible {
 	display: flex;
@@ -609,13 +719,4 @@ code {
 
 .elide-ellipsis strong.elide-dots {
 	font-weight: bold;
-}
-
-
-
-
-.custom-expandable-content.is-hidden {
-	height: 0 !important;
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
 }
