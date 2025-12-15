@@ -51,12 +51,15 @@
 
     .controls {
       position: fixed;
-      right: 0.75rem;
-      bottom: 0.75rem;
+      left: 1rem;
+      bottom: 1rem;
       display: flex;
+      flex-wrap: wrap;
       gap: 0.5rem;
       pointer-events: auto;
       z-index: 9999;
+      max-width: calc(100% - 2rem);
+      justify-content: flex-start;
     }
 
     .btn {
@@ -87,11 +90,13 @@
 
     .route-hint { font-size: 0.75em; opacity: 0.75; margin-top: 0.75rem; }
 
-    /* Auto-highlight chosen branch */
-    .chosen-yes svg .yesPath > * { stroke-width: 4px !important; }
-    .chosen-no  svg .noPath  > * { stroke-width: 4px !important; }
-    .chosen-yes svg .edgePath.yesPath path { stroke-width: 4px !important; }
-    .chosen-no  svg .edgePath.noPath  path { stroke-width: 4px !important; }
+    /* Allow slides to scroll when content exceeds the viewport */
+    .reveal .slides section {
+      max-height: calc(100vh - 3.5rem);
+      overflow-y: auto;
+      padding: 1.25rem 1.5rem 4rem;
+      box-sizing: border-box;
+    }
 
     /* Summary UI */
     .summary-table{width:100%;border-collapse:collapse;margin-top:0.75rem;font-size:14px;}
@@ -480,7 +485,6 @@ flowchart TD
       renderMermaidVisible();
       updateUIForSlide(deck.getCurrentSlide());
       renderBreadcrumbs();
-      applyAutoHighlight(deck.getCurrentSlide());
       if (deck.getCurrentSlide()?.id === "SUMMARY") renderSummary();
     });
 
@@ -488,7 +492,6 @@ flowchart TD
       renderMermaidVisible();
       updateUIForSlide(ev.currentSlide);
       renderBreadcrumbs();
-      applyAutoHighlight(ev.currentSlide);
       if (ev.currentSlide?.id === "SUMMARY") renderSummary();
     });
 
@@ -520,11 +523,15 @@ flowchart TD
     const btnNo  = document.getElementById("btnNo");
     const btnBack = document.getElementById("btnBack");
     const btnSummary = document.getElementById("btnSummary");
+    const btnDownloadDeck = document.getElementById("btnDownloadDeck");
+    const btnCopyDeck = document.getElementById("btnCopyDeck");
 
     btnYes.addEventListener("click", () => route("yes"));
     btnNo.addEventListener("click", () => route("no"));
     btnBack.addEventListener("click", () => goBackToLastDecision());
     btnSummary.addEventListener("click", () => gotoSummary());
+    btnDownloadDeck.addEventListener("click", () => downloadDeck());
+    btnCopyDeck.addEventListener("click", () => copyDeckHtml());
 
     document.addEventListener("keydown", (ev) => {
       const k = ev.key.toLowerCase();
@@ -532,10 +539,27 @@ flowchart TD
       if (k === "n") { ev.preventDefault(); route("no"); }
       if (k === "b") { ev.preventDefault(); goBackToLastDecision(); }
       if (k === "s") { ev.preventDefault(); gotoSummary(); }
+      if (k === "d") { ev.preventDefault(); downloadDeck(); }
+      if (k === "c") { ev.preventDefault(); copyDeckHtml(); }  
     }, true);
 
     function gotoSummary() {
       window.location.hash = "#/SUMMARY";
+    }
+
+    async function copyDeckHtml() {
+      const originalLabel = btnCopyDeck.innerHTML;
+      const html = "<!doctype html>\n" + document.documentElement.outerHTML;
+
+      try {
+        await navigator.clipboard.writeText(html);
+        btnCopyDeck.textContent = "Copied!";
+      } catch (err) {
+        console.error("Copy failed:", err);
+        btnCopyDeck.textContent = "Copy failed";
+      }
+
+      setTimeout(() => { btnCopyDeck.innerHTML = originalLabel; }, 1800);
     }
 
     function isDecisionSlide(slide) {
@@ -632,22 +656,6 @@ flowchart TD
 
       renderBreadcrumbs();
       btnBack.disabled = hist.length === 0;
-    }
-
-    /*******************************
-     * AUTO-HIGHLIGHT CHOSEN BRANCH
-     *******************************/
-    function applyAutoHighlight(slide) {
-      if (!slide) return;
-
-      slide.classList.remove("chosen-yes", "chosen-no");
-
-      const route = getLastRoute();
-      if (!route) return;
-      if (route.toId !== slide.id) return;
-
-      if (route.choice === "yes") slide.classList.add("chosen-yes");
-      if (route.choice === "no")  slide.classList.add("chosen-no");
     }
 
     /*******************************
@@ -787,6 +795,27 @@ flowchart TD
       a.click();
       a.remove();
       setTimeout(() => URL.revokeObjectURL(a.href), 500);
+    }
+
+    async function downloadDeck() {
+      const url = new URL(window.location.href);
+      url.hash = ""; // fetch the raw HTML, not the hash view
+
+      try {
+        const res = await fetch(url.toString());
+        const text = await res.text();
+        const blob = new Blob([text], { type: "text/html" });
+
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "decsion_tree_with_feedback.html";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 500);
+      } catch (e) {
+        console.error("Deck download failed", e);
+      }
     }
 
     function resetSession() {

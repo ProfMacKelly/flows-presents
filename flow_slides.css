@@ -1,0 +1,98 @@
+   /* Layout helpers */
+    .mermaid { font-size: 20px; }
+
+    /* Fixed UI overlay */
+    .overlay-ui {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      pointer-events: none;
+      z-index: 9999;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    .breadcrumbs {
+      pointer-events: auto;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(4px);
+      font-size: 14px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .crumb {
+      padding: 0.2rem 0.5rem;
+      border: 1px solid rgba(0,0,0,0.2);
+      border-radius: 999px;
+    }
+    .crumb .choice {
+      margin-left: 0.35rem;
+      font-weight: 600;
+    }
+
+    .controls {
+      position: fixed;
+      right: 0.75rem;
+      bottom: 0.75rem;
+      display: flex;
+      gap: 0.5rem;
+      pointer-events: auto;
+      z-index: 9999;
+    }
+
+    .btn {
+      border: 1px solid rgba(0,0,0,0.25);
+      border-bottom-width: 2px;
+      border-radius: 0.6rem;
+      padding: 0.5rem 0.75rem;
+      background: rgba(255,255,255,0.95);
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1;
+      user-select: none;
+    }
+    .btn[disabled] {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+    .btn kbd {
+      display: inline-block;
+      border: 1px solid #888;
+      border-bottom-width: 2px;
+      padding: 0.05rem 0.3rem;
+      border-radius: 0.25rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.9em;
+      margin-left: 0.35rem;
+    }
+
+    .route-hint { font-size: 0.75em; opacity: 0.75; margin-top: 0.75rem; }
+
+    /* Auto-highlight chosen branch */
+    .chosen-yes svg .yesPath > * { stroke-width: 4px !important; }
+    .chosen-no  svg .noPath  > * { stroke-width: 4px !important; }
+    .chosen-yes svg .edgePath.yesPath path { stroke-width: 4px !important; }
+    .chosen-no  svg .edgePath.noPath  path { stroke-width: 4px !important; }
+
+    /* Summary UI */
+    .summary-table{width:100%;border-collapse:collapse;margin-top:0.75rem;font-size:14px;}
+    .summary-table th,.summary-table td{border:1px solid rgba(0,0,0,0.2);padding:0.5rem;vertical-align:top;}
+    .muted{opacity:0.75;}
+    .callout{
+      margin-top:0.75rem;
+      padding:0.75rem;
+      border:1px solid rgba(0,0,0,0.15);
+      border-radius:0.75rem;
+      background:rgba(255,255,255,0.90);
+      font-size:14px;
+    }
+    .mono{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.95em;
+    }
