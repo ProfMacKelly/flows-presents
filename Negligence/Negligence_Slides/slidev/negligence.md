@@ -8,13 +8,11 @@ title: Negligence
 # apply UnoCSS classes to the current slide
 class: text-center
 # https://sli.dev/features/drawing
-drawings:
-  persist: false
+drawings: false
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
-hideArrow: false
 layout: center
 alias: start
 ---
@@ -26,30 +24,21 @@ alias: overview
 
 # Overview: Negligence in General
 
-<ol class="legal-list">
-  <li>
-    <i>Prima Facie</i> Case for Liability
+<v-clicks>
 
-    <div v-click class="note">
-      Note: Sufficient evidence to support a claim at <b>face value</b>; rebuttable by defenses.
-    </div>
+1. *Prima Facie* Case for Liability  
+   - **Duty** (to others)
+   - **Breach** (of duty)
+   - **Damages** (suffered by another)
+   - **Causation** (of damages)
 
-    <ol class="alpha-list">
-      <li>Duty (to others)</li>
-      <li>Breach (of duty)</li>
-      <li>Damages (suffered by another)</li>
-      <li>Causation (of damages)</li>
-    </ol>
-  </li>
+   > **Note:** Sufficient evidence to support a claim at **face value**; rebuttable by defenses.
 
-  <li>
-    Defenses to Liability
-    <ol class="alpha-list">
-      <li>Failure of Proof (insufficient evidence)</li>
-      <li>Affirmative Defenses</li>
-    </ol>
-  </li>
-</ol>
+2. **Defenses to Liability**
+   - Failure of Proof
+   - Affirmative Defenses
+
+</v-clicks>
 
 
 ---

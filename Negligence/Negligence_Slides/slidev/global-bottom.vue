@@ -156,8 +156,9 @@ watch(currentSlideRoute, (route) => {
     <p class="text-white/30 uppercase tracking-widest text-sm font-bold">Paused</p>
   </div> 
     <!-- Debug overlay -->
-    <div style="position:fixed;bottom:10px;right:10px;background:#000;color:#fff;padding:8px;">
-      {{ debugInfo }}
-    
-  </div>
+<div v-if="showDebug" style="position:fixed;bottom:10px;right:10px;background:#000;color:#fff;padding:8px;">
+  {{ debugInfo }}
+</div>
+
+
 </template>
