@@ -2,16 +2,7 @@
 theme: default
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: none
-# some information about your slides (markdown enabled)
-title: Negligence & Products Liability
-# apply UnoCSS classes to the current slide
-class: text-center
-# https://sli.dev/features/drawing
-drawings: false
-# Global slide canvas sizing (recommended)
-aspectRatio: 16/9
-canvasWidth: 760  # was 980; smaller = everything appears larger on screen
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
+# some information about your slides (markdown enabled)ons
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
@@ -20,6 +11,15 @@ alias: start
 defaults:
   layout: zoomable
 ---
+title: Negligence & Products Liability
+# apply UnoCSS classes to the current slide
+class: text-center
+# https://sli.dev/features/drawing
+drawings: false
+# Global slide canvas sizing (recommended)
+aspectRatio: 16/9
+canvasWidth: 760  # was 980; smaller = everything appears larger on screen
+# slide transition: https://sli.dev/guide/animations.html#slide-transiti
 # Negligence & Products Liability
 
 ---
