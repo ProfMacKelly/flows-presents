@@ -17,6 +17,7 @@
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
+    "@slidev/types": "^52.11.1",
     "@unocss/transformer-directives": "^66.5.10",
     "@vue/compiler-sfc": "3.5.25",
     "vite": "^7.3.0"
