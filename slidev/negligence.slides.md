@@ -121,20 +121,21 @@ alias: duties
 </v-clicks>
 
 ---
-class: -mt--20
+class: -mt--10
 ---
 
+Duty Flowchart
 <Transform :scale="2.2" origin="left">
 
 ```mermaid
 flowchart LR 
     start["**START HERE**"] --> du["Did D owe a<br/>**legal duty** to P?"]
-    du --> du1["Was there a **foreseeable** harm to P"]
-    du --> du2["Did D own/possess a **premises** relevant to the circumstances?"]
-    du --> du3["Did did and P have a **special relationship**?"]
-    du --> du4["Did D **create** a risk**?"]
-    du --> du5["Did D **assume a duty**?"]
-    du --> du6["Did D have a **contract**?"]
+    du --> du1["1. Was there a **foreseeable** harm to P"]
+    du --> du2["2, Did D own/possess a **premises** relevant to the circumstances?"]
+    du --> du3["3. Did did and P have a **special relationship**?"]
+    du --> du4["4. Did D **create** a risk**?"]
+    du --> du5["5. Did D **assume a duty**?"]
+    du --> du6["6. Did D have a **contract**?"]
     du1 --> yes-no["Were any of <br>the answers **yes**?"]
     du2 --> yes-no
     du3 --> yes-no
