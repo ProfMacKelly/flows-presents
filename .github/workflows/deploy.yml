@@ -39,7 +39,7 @@ jobs:
           ls -la slidev/pnpm-lock.yaml
 
       - name: Install dependencies
-        run: pnpm -C slidev install --no-frozen-lockfile
+        run: pnpm -C slidev install --frozen-lockfile
 
       - name: Build Slidev
         run: pnpm -C slidev exec slidev build --base /resources/
