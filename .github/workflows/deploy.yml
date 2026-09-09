@@ -30,14 +30,10 @@ jobs:
           version: 10
 
       - name: Install dependencies
-        run: pnpm -C slidev install --no-frozen-lockfile
+        run: pnpm -C slidev install --frozen-lockfile
 
-      - name: Ensure lockfile did not change
-        run: |
-          git status --porcelain
-          git diff --exit-code -- slidev/pnpm-lock.yaml
-      - name: Build Slidev
-        run: pnpm -C slidev exec slidev build --base /resources/
+      - name: Build decks
+        run: pnpm -C slidev run build:pages
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

@@ -1,12 +1,16 @@
 ---
 # try 'default' to start simple
 theme: default
+# shared components, layouts, styles and setup for every deck in this repo
+# https://sli.dev/guide/theme-addon#use-addon
+addons:
+  - slidev-addon-resources
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: none
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
-mdc: true\
+mdc: true
 hideArrow: false
 # https://sli.dev/features/drawing
 drawings:

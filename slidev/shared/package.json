@@ -1,0 +1,13 @@
+{
+  "name": "slidev-addon-resources",
+  "type": "module",
+  "private": true,
+  "version": "0.0.0",
+  "keywords": [
+    "slidev",
+    "slidev-addon"
+  ],
+  "engines": {
+    "slidev": ">=52.0.0"
+  }
+}
